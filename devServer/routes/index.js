@@ -13,7 +13,7 @@ router.post('/', function(req, res, next) {
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/index', function(req, res, next) {
 	res.render('index', { title: 'Express' });
 });
 
