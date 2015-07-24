@@ -56,5 +56,10 @@ app.use(function(err, req, res, next) {
     });
 });
 
+var port = 8080;
+
+app.listen(port, function(){
+    console.log('listening -> http://localhost:' + port);
+});
 
 module.exports = app;
