@@ -2,19 +2,30 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 
+//建置static html page
 router.post('/', function(req, res, next) {
-	fs.writeFile( 'public/' + req.body.name + '.html', req.body.data, function (err) {
-		if (err) throw err;
-		console.log('Saved: ' + req.body.name + '.html' );
+
+	var path = 'public/' + req.body.name + '.html';
+
+	fs.unlink(path, function(){
+
+		setTimeout(function(){
+			fs.writeFile( path, req.body.data, function (err) {
+				if (err) throw err;
+				console.log('Saved: ' + req.body.name + '.html' );
+			});
+		}, 1000);
+
 	});
 
 	res.json({ ok : 1});
 });
 
+//讀取所有一般頁面
+router.get('/', function(req, res, next) {
 
-/* GET home page. */
-router.get('/index', function(req, res, next) {
-	res.render('index', { title: 'Express' });
+	if(req.query.name)
+		res.render(req.query.name);
 });
 
 module.exports = router;

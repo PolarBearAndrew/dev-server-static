@@ -19,7 +19,7 @@ d<!DOCTYPE html>
 		console.log('init data...');
 
 		var frames = '';
-		var myFrame = '<iframe id="test" src="http://localhost:8080/@url" frameborder="0"></iframe>';
+		var myFrame = '<iframe id="test" src="http://localhost:8080/?name=@url" frameborder="0"></iframe>';
 
 		for (var i = config.length - 1; i >= 0; i--) {
 			frames += myFrame.replace("@url", config[i]);
@@ -36,7 +36,7 @@ d<!DOCTYPE html>
 			var name = config[i];
 
 			$.ajax({
-				url: 'http://localhost:8080/' + name,
+				url: 'http://localhost:8080/?name=' + name,
 				type: 'GET',
 				contentType: 'text/plain',
 
