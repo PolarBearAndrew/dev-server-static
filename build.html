@@ -1,0 +1,56 @@
+d<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>test</title>
+
+	<script src="./jquery-2.1.3.min.js"></script>
+
+</head>
+
+<body>
+	<p>build page</p>
+
+<script>
+	$(document).ready(function(){
+
+		console.log('start crawl');
+
+		var name = 'index';
+
+		$.ajax({
+			url: 'http://localhost:8080',
+			type: 'GET',
+			contentType: 'text/plain',
+			success: function( result ){
+
+				// console.log('success', result)
+
+				$.ajax({
+					url: 'http://localhost:8080',
+					type: 'POST',
+					data : { name: name, data: result },
+
+					success: function( result ){
+						console.log('saved')
+					},
+					error: function(err){
+						console.log('error', err)
+					}
+				});
+
+			},
+			error: function(err){
+				console.log('error', err)
+			}
+		});
+	});
+
+</script>
+
+	<iframe id="test" src="http://localhost:8080" frameborder="0"></iframe>
+
+</body>
+
+</html>
