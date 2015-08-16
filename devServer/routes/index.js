@@ -2,30 +2,43 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 
-//建置static html page
-router.post('/', function(req, res, next) {
+var db = require('../data/index.js');
 
-	var path = 'public/' + req.body.name + '.html';
+// //建置static html page
+// router.post('/', (req, res, next) => {
 
-	fs.unlink(path, function(){
+// 	var path = 'public/' + req.body.name + '.html';
 
-		setTimeout(function(){
-			fs.writeFile( path, req.body.data, function (err) {
-				if (err) throw err;
-				console.log('Saved: ' + req.body.name + '.html' );
-			});
-		}, 1000);
+// 	fs.unlink(path, () => {
+// 		setTimeout( () => {
+// 			fs.writeFile( path, req.body.data, err => {
+// 				if (err) throw err;
+// 				console.log('Saved: ' + req.body.name + '.html' );
+// 			});
+// 		}, 1000);
+// 	});
+// 	res.json({ ok : 1 });
+// });
 
-	});
+//read page (using on dev)
+router.get('/', (req, res, next) => {
 
-	res.json({ ok : 1});
+	if( req.query.page !== undefined && req.query.data !== undefined){
+
+		let page	 = req.query.page;  //using jade page
+		let data	 = req.query.data;  //using data
+		let appbar = db.appbar || {}; //appbar data
+
+		res.render( page, { appbar: appbar, data: store[data] }); //output
+
+	}else{ return next('頁面不存在'); }
 });
 
-//讀取所有一般頁面
-router.get('/', function(req, res, next) {
+//build page
+router.get('/build', (req, res, next) => {
 
-	if(req.query.name)
-		res.render(req.query.name);
-});
+
+
+}
 
 module.exports = router;
