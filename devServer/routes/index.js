@@ -59,4 +59,8 @@ router.get('/build', (req, res, next) => {
   res.json({ count: list.length });
 });
 
+router.get('/admin', (req, res, next) => {
+  res.render('_build')
+});
+
 module.exports = router;
