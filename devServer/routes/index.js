@@ -34,9 +34,22 @@ router.get('/', (req, res, next) => {
 	}else{ return next('頁面不存在'); }
 });
 
+//read page for build
+
+//recheck queryString insid ()
+
 //build page
 router.get('/build', (req, res, next) => {
 
+	//need to use pormise
+
+	//delete all files
+
+	//request file
+
+	//save
+
+	// report finish
 
 
 }
