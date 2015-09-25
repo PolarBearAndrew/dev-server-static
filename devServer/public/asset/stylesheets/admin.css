@@ -65,5 +65,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 3, ../sass/admin.sass */
 body {
+  padding-top: 100px;
+  padding-left: 120px;
   background-color: #1b1c1d;
+}
+
+/* line 8, ../sass/admin.sass */
+#main {
+  height: 460px;
+  margin-left: 20px;
+  padding-left: 40px;
+  border-left: 4px solid #333;
+}
+
+/* line 14, ../sass/admin.sass */
+.list-wrapper {
+  width: 300px;
+  float: left;
 }
