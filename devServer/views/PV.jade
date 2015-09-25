@@ -1,0 +1,225 @@
+extends container
+
+block content
+    #myCarousel.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+        li(data-target='#myCarousel', data-slide-to='3')
+        li(data-target='#myCarousel', data-slide-to='4')
+        //- li(data-target='#myCarousel', data-slide-to='5')
+        //- li(data-target='#myCarousel', data-slide-to='6')
+        //- li(data-target='#myCarousel', data-slide-to='7')
+        //- li(data-target='#myCarousel', data-slide-to='8')
+      .carousel-inner(role='listbox')
+        .item.active
+          img(src='asset/img/pv/demo1.png', alt='First slide')
+          .container
+            .carousel-caption
+              h1 宜蘭竹林國小
+              //- p
+              //-   | ASE 規劃完整的創能、儲電系統，同時結合了創能太陽能系統並儲電並能賣回給台電。完整自動化運作，提供乾淨的綠色創能，同事亦配上長期穩定的收益。
+        .item
+          img(src='asset/img/pv/demo2.png', alt='First slide')
+          .container
+            .carousel-caption
+              h1 金門金沙電廠
+              //- p
+              //-   | ASE 規劃完整的創能、儲電系統，同時結合了創能太陽能系統並儲電並能賣回給台電。完整自動化運作，提供乾淨的綠色創能，同事亦配上長期穩定的收益。
+        //- .item
+        //-   img(src='asset/img/pv/demo3.png', alt='First slide')
+        //-   .container
+        //-     .carousel-caption
+        //-       h1 台南一般住宅太陽能板用戶
+        //- .item
+        //-   img(src='asset/img/pv/demo04.png', alt='First slide')
+        //-   .container
+        //-     .carousel-caption
+        //-       h1 蘇澳一般住宅太陽能板用戶
+        //- .item
+        //-   img(src='asset/img/pv/demo05.png', alt='First slide')
+        //-   .container
+        //-     .carousel-caption
+        //-       h1 台南一般住宅太陽能板用戶
+        .item
+          img(src='asset/img/pv/demo06.png', alt='First slide')
+          .container
+            .carousel-caption
+              h1 台北市士東市場
+        .item
+          img(src='asset/img/pv/demo07.png', alt='First slide')
+          .container
+            .carousel-caption
+              h1 平溪國小
+        //- .item
+        //-   img(src='asset/img/pv/demo08.png', alt='First slide')
+        //-   .container
+        //-     .carousel-caption
+        //-       h1 花蓮農工
+        .item
+          img(src='asset/img/pv/demo09.png', alt='First slide')
+          .container
+            .carousel-caption
+              h1 雲林大屯國小
+        //- .item
+        //-   img(src='asset/img/pv/demo10.png', alt='First slide')
+        //-   .container
+        //-     .carousel-caption
+        //-       h3
+        //-         style.
+        //-           .sp-img{
+        //-           float:left;
+        //-           width: 250px;
+        //-           height: 60px;
+        //-           text-align: center;
+        //-           text-shadow: 3px 3px 3px black;
+        //-           }
+        //-         div.sp-img(style="margin-left:-200px") 銘傳大學
+        //-           br
+        //-           | 金門校區風光互補路燈
+        //-         div.sp-img(style="margin-left:130px") 新化高工
+        //-           br
+        //-           | 太陽能路燈
+        //-         div.sp-img(style="float:right; margin-right: -100px") 中信國小
+        //-           br
+        //-           | 風光互補路燈
+
+      a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+        span.sr-only 下一張
+      a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+        span.sr-only 上一張
+    .container.marketing
+      .row
+        .col-lg-4
+          img.img-circle(src='asset/img/pv/ex-03.png', alt='Generic placeholder image', style='width:140px;height:140px')
+          h2 適應氣候
+          p
+            | 通過CNS 11526風壓測試：SPV系列能承受 3600 Pa ， BIPV系列能承受 7200 Pa，適合安裝在強風和高樓層之建築物。
+        .col-lg-4
+          img.img-circle(src='asset/img/pv/ex-01.jpg', alt='Generic placeholder image', style='width:140px;height:140px')
+          h2 特殊防護
+          p
+            | 通過 TÜVIEC 61701鹽霧腐蝕測試：ASE 採用的太陽光電模組抗鹽霧腐蝕，讓太陽光電模組安裝在多雨霧且鹽分高的沿海地區仍能正常地運作。
+        .col-lg-4
+          img.img-circle(src='asset/img/pv/ac4.png', alt='Generic placeholder image', style='width:140px;height:140px')
+          h2 安心防火
+          p
+            | 通過 IEC 61215、UL 790 的防火測試：太陽光電發電系統運作時，所產生的直流電壓高達1000 V以上。ASE 採用通過嚴格防火測試的太陽光電模組，將風險降至最低，放置在屋頂上承受太陽直射也無須擔心。
+      hr
+      .row.featurette
+        .col-md-7
+          h2.featurette-heading
+            | 品質保證
+          h3
+            span.text-muted ASE 除了提供完善的服務，更提供完美品質的產品。
+          p.lead
+            |採用技術龍頭&nbsp;
+            img(src="http://www.inventecenergy.com/images/n-logo.jpg" style="width:90px")
+            | &nbsp;太陽能模組，在專業的全無塵產線通過智能篩選，嚴格的四道品質管控，以及全面性的測試，保障太陽光電模組的穩定性與效能。&nbsp;
+            img(src="http://www.inventecenergy.com/images/n-logo.jpg" style="width:90px")
+            | &nbsp;太陽能模組通過無數的國際認證，獲得歐美、日本等國家之系統廠商指定使用。
+        .col-md-5
+          img.featurette-image.img-responsive(src='asset/img/pv/pv1.png', alt='產品設計圖')
+      hr
+      .row.featurette
+        .col-md-5
+          br
+          br
+          br
+          img.featurette-image.img-responsive(src='asset/img/pv/pv2.png', alt='Generic placeholder image' style="margin-left:32px")
+        .col-md-7
+          h2.featurette-heading
+            img(src="http://www.inventecenergy.com/images/n-logo.jpg" style="width:150px")
+            | &nbsp;&nbsp;業界首選
+          h3
+            span.text-muted ASE 絕對選用最高品質太陽能模組
+          p.lead
+            | 擁有 6×10 @ 230 ~ 280Wp 產品認證太陽能模組，適用於一般系統建置 
+            br
+            | 擁有 6x12 @ 300 ~ 330Wp太陽能模組，適用於大規模系統建置 
+            br
+            | 高效能 6“ 多晶矽或單晶矽之晶圓片 
+            br
+            | 發電效能正公差高達+ 5WP
+            br
+            | 高強度的耐風壓 2400 Pa 荷重 5400 Pa 認證
+            br
+            | 由 CHUBB Error and Omission (E&O) 保險投保
+          Button.btn.btn-success.btn-lg.pull-right(style="margin-right:80px" aria-label="Left Align" , data-toggle='modal', data-target='#spec')
+            span.glyphicon.glyphicon-list-alt(aria-hidden="true")
+            |     詳細規格
+      hr
+      .row.featurette
+        br
+        .col-md-7
+          h2.featurette-heading
+            | 太陽光電發電系統工程
+          p.lead
+            | ASE 太陽光電發電系統工程服務，除了提供高效能太陽能模組、轉換器、支撐架等組件，還包含了完整的
+            a(href='LED.html') &nbsp;節能服務&nbsp;
+            | 、
+            a(href='PV.html') &nbsp;綠色能源&nbsp;
+            | 、
+            a(href='Smart.html') &nbsp;智能監控&nbsp;
+            | 、
+            a(href='Fix.html') &nbsp;修繕改裝&nbsp;
+            | 四大服務範疇，依照不同的需求，一次性地為您量身訂做完整的能源管理系統，無論是舊式系統改裝、全新的系統建置，ASE 皆有相關的專業服務。
+        .col-md-5
+          img.featurette-image.img-responsive(src='asset/img/pv/sys.png', alt='Generic placeholder image')
+
+      hr
+      - var iconSize = 57;
+      .row.featurette
+        .col-md-12
+          center
+            - for( var i = 1; i <= 4; i++)
+              img.img-circle(src='asset/img/pv/icon/'+i+'.png', alt='', style='width:'+iconSize+'px;height:'+iconSize+'px;margin:3px')
+            br
+            - for( var i = 5; i <= 12; i++)
+              img.img-circle(src='asset/img/pv/icon/'+i+'.png', alt='', style='width:'+iconSize+'px;height:'+iconSize+'px;margin:3px')
+            br
+            br
+            h4 漢鵬科技 • 高品質 • 專業規劃 • 系統工程
+      //- .row.featurette
+      hr.featurette-divider
+      include footer.jade
+      //- Dialog
+      #spec.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+        .modal-dialog.modal-lg
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal')
+                span(aria-hidden='true') ×
+                span.sr-only Close
+              h4.modal-title 太陽能板規格參考
+            .modal-body
+              - var imgWidth = '800px';
+              style.
+                .pvImg{
+                  margin: 0 auto;
+                  margin-left: 30px;
+                }
+              .container
+                - var s = 'margin-top:-30px'
+                .row
+                  h1(style="margin-top:0px") SPV 系列
+                  img.pvImg(src='asset/img/pv/spec01.png', alt='', style="max-width:" + imgWidth )
+                  h1(style=s) BIPV 系列
+                  img.pvImg(src='asset/img/pv/spec02.png', alt='', style="max-width:" + imgWidth )
+                  h1(style=s) Black Knight 系列
+                  img.pvImg(src='asset/img/pv/spec03.png', alt='', style="max-width:" + imgWidth )
+
+    //- script(src='asset/javascripts/default.js')
+    //- //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    //- script(src='https://code.jquery.com/jquery-1.11.1.min.js')
+    //- //- script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    //- script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    //- //- script(src='asset/javascripts/jsBootstrapValidation.js')
+
+    //- link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css")
+
+    script(src='asset/javascripts/default2.js')
+    script(src='asset/javascripts/default3-bugs.js')

@@ -1,0 +1,28 @@
+extends container
+
+block content
+  style.
+    body{
+    padding-top:120px;
+    //-  background-color: #CECECE
+    }
+
+  .container
+    .row
+      - var i = 0
+      - for( var col = 0; col < 4; col++)
+        .col-md-3
+          - for( ; i < data.length; i++)
+            - var tmp = data[i]
+              .thumbnail
+                - if(!tmp.img)
+                  img(src='http://ext.pimg.tw/diauchan/49e5a55878b62.jpg', alt='...')
+                -else
+                  img(src=tmp.img, alt='...')
+                .caption
+                  h4= tmp.title
+                  p
+                    a.btn.btn-primary.btn-sm(href=tmp.url target="_blank" ) 瞭解更多
+            - if( i == parseInt( data.length /4 ) * ( col + 1 ) )
+              - i++; break;
+    include footer

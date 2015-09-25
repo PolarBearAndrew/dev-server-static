@@ -8,9 +8,13 @@ head
   link(rel='stylesheet', type='text/css', href='/asset/stylesheets/admin.css')
 
   script(src='https://code.jquery.com/jquery-2.1.4.min.js')
-  script(src='/asset/javascripts/admin.js')
   script(src='/semantic-ui/semantic.min.js')
+
+  //- dev server script
+  script(src='/asset/javascripts/_admin.js')
 body
   .ui.inverted.segment
     center
       button#build.ui.button.inverted.green Build
+      br
+      #result
