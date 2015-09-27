@@ -83,3 +83,15 @@ body {
   width: 300px;
   float: left;
 }
+
+/* line 18, ../sass/admin.sass */
+#loader {
+  position: absolute;
+  top: 105px;
+  left: 230px;
+}
+
+/* line 23, ../sass/admin.sass */
+.hide {
+  opacity: 0;
+}

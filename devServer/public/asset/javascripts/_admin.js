@@ -2,6 +2,12 @@ $(document).ready( function(){
 
   $('html, body').on('click', '#build', function(){
 
+    var $animate = $('#loader');
+    var $result = $('#result');
+
+    $animate.removeClass('hide');
+    $result.html('');
+
     $.ajax({
       url: 'http://localhost:8080/build',
       type: 'POST',
@@ -24,9 +30,9 @@ $(document).ready( function(){
 
         }
 
-        $('#result').html( output + '</div></div>' );
+        $result.html( output + '</div></div>' ); // show all
 
-        console.log('output', output);
+        $animate.addClass('hide');
       },
 
       fail: function( err ){
