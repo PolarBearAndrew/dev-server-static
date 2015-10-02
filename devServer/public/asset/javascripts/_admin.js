@@ -41,6 +41,8 @@ $(document).ready( function(){
 
     }); // ajax end
 
+    return false;
+
   }); // #build click end
 
 }); // doc ready end
